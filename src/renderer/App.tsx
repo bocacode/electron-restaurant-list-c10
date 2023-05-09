@@ -4,6 +4,11 @@ import RestCard from './components/RestCard';
 import RestDetails from './components/RestDetails';
 import './App.css';
 
+const sendMessage = () => {
+  window.electron.terminalMessage("User clicked h1.");
+}
+
+
 function Hello() {
 
   const [restList, setRestList] = useState<any>();
@@ -17,7 +22,7 @@ function Hello() {
 
   return (
     <div className='App'>
-      <div className="Hello">
+      <div className="Hello" onClick={sendMessage}>
         <h1>Electron Restaurant List</h1>
       </div>
       <div className="Hello">
